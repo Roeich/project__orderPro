@@ -105,6 +105,9 @@ body{
   line-height: 1.5;
   background-color: var(--bg_light2);
 }
+h1,h2,h3,h4,h5,h6{
+  font-weight: 600;
+}
 a{
   color: var(--c_warning);
 }
@@ -181,7 +184,6 @@ a{
   padding: 0.6072rem 1rem;
 }
 .form-control{
-  color: var(--c_gray);
   font-size: var(--fs_12);
   border: 0.5px solid var(--border_light);
   border-radius: 0.4286rem;
@@ -219,6 +221,13 @@ a{
   --text__color:var(--c_warning);
   --bg__color:var(--bg_warningLt);
 }
+@media(max-width:575.98px){
+  .container,
+  .container-fluid{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 
 /* ____________________ start login page  ____________________ */
 .login_pageRow{
@@ -229,11 +238,14 @@ a{
   background-color: var(--bg_primary);
   display: grid;
   place-items: center;
+  position: relative;
 }
 .login_leftContent{
   max-width: 33.5714rem;
   padding: 3rem 0rem;
   margin: auto;
+  position: relative;
+  z-index: 1;
 }
 .login_leftTitle{
   color: var(--c_white);
@@ -243,5 +255,41 @@ a{
 .login_leftImg{
   width: 27.3571rem;
   max-width: 100%;
+}
+
+.login_rightColumn{
+  display: grid;
+  place-items: center;
+}
+.login_rightContent{
+  max-width: 30rem;
+  padding: 3rem 0rem;
+  margin: auto;
+}
+.iti--allow-dropdown{
+  width: 100%;
+}
+.iti .iti__selected-dial-code{
+  font-size: var(--fs_12);
+}
+.loin_shape_divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.loin_shape_divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 45.1429rem;
+}
+@media(max-width:991.98px){
+  .login_leftColumn{
+    display: none;
+  }
 }
 /* ____________________ end login page  ____________________ */
