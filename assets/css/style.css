@@ -221,6 +221,12 @@ a{
   --text__color:var(--c_warning);
   --bg__color:var(--bg_warningLt);
 }
+.hover_underline{
+  text-decoration: none;
+}
+.hover_underline:hover{
+  text-decoration: underline;
+}
 @media(max-width:575.98px){
   .container,
   .container-fluid{
@@ -287,9 +293,37 @@ a{
   width: calc(100% + 1.3px);
   height: 45.1429rem;
 }
+.pincode-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 14px;
+}
+.pincode-input-container input {
+  text-align: center;
+
+  /* background-color: transparent;
+  box-shadow: none;
+  border-radius: 0rem;
+  border: none;
+  border-bottom: 1px solid var(--border_gray); */
+}
+.pincode-input-error{
+  display: none;
+}
 @media(max-width:991.98px){
   .login_leftColumn{
     display: none;
   }
 }
 /* ____________________ end login page  ____________________ */
+
+/* ____________________ start dashboard page  ____________________ */
+.header_top{
+  padding: 12px 24px;
+  background-color: var(--bg_white);
+}
+.min_w_max{
+  min-width: max-content;
+}
+/* ____________________ end dashboard page  ____________________ */
