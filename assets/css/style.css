@@ -1,3 +1,5 @@
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.4.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
 @font-face {
   font-family: "Manrope";
   src: url("../fonts/Manrope.ttf");
@@ -93,6 +95,8 @@
 
   --rounded_6:0.4286rem;
   --rounded_8:0.5714rem;
+  --rounded_12:0.8571rem;
+  --rounded_16:1.1429rem;
 
   --shadow_sm:0rem 0.1429rem 0.5714rem rgba(0, 0, 0, 0.1);
 }
@@ -160,6 +164,12 @@ a{
 .px_20{padding-left: var(--p_20);padding-right: var(--p_20);}
 .px_36{padding-left: var(--p_36);padding-right: var(--p_36);}
 
+.px_24{padding-left:var(--p_24);padding-right:var(--p_24);}
+.p_12{padding:var(--p_12);}
+.px_12{padding-left:var(--p_12);padding-right:var(--p_12);}
+.py_12{padding-top:var(--p_12);padding-bottom:var(--p_12);}
+.p_6{padding:var(--p_6);}
+
 .mb_4{margin-bottom: var(--m_4);}
 .mb_10{margin-bottom: var(--m_10);}
 .mb_12{margin-bottom: var(--m_12);}
@@ -175,6 +185,10 @@ a{
   --bs-gutter-x: var(--g_20);
   --bs-gutter-y: var(--g_20);
 }
+.rounded_6{border-radius:var(--rounded_6);}
+.rounded_8{border-radius:var(--rounded_8);}
+.rounded_12{border-radius:var(--rounded_12);}
+.rounded_16{border-radius:var(--rounded_16);}
 /* overwrite */
 .btn{
   font-size: var(--fs_14);
@@ -325,5 +339,50 @@ a{
 }
 .min_w_max{
   min-width: max-content;
+}
+
+
+
+.mb_8{margin-bottom:var(--m_8);}
+.mr_8{margin-right:var(--m_8);}
+.cursor_pointer{cursor:pointer;}
+.scrollbar-track-y{right:initial!important;left:0px!important;width:4px!important;background:rgba(222, 222, 222, 0.1);}
+.scrollbar-thumb{width:4px!important;background:var(--c_border3);}
+i.fi::before{vertical-align:sub;}
+.notif_btn{padding-left:0.3em;padding-right:0.3em;width:2.7857em;background-color:var(--bg_white)!important;border-radius:0.5rem;}
+.notif_badge{position:absolute;right:0px;bottom:0px;width:0.7143em;min-width:0.7143em;height:0.7143em;border-radius:50%;background-color:var(--c_danger);}
+.notif_dropdown .dropdown-menu{width:450px;font-weight:500;}
+.notif_dropdownBody{max-height:500px;overflow-y:auto;}
+.notif_item{color:var(--c_gray2);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:var(--p_16);border-radius:var(--rounded_6);border:1px solid transparent;margin-bottom:8px;text-decoration:none;}
+.notif_item.unreaded{border-color:var(--c_border1);background-color:var(--bg_light2);}
+.notif_item .fs_14{font-weight:500;}
+.notif_item .fs_12{color:var(--c_gray2);font-weight:400;}
+.notif_item:hover{border-color:var(--c_border3);}
+.notif_iconBox{font-size:var(--fs_18);width:36px;min-width:36px;height:36px;border-radius:50%;display:-ms-grid;display:grid;place-items:center;}
+.notif_iconBox i{line-height:1;}
+.notif__news .notif_iconBox{color:var(--c_primary);background-color:rgba(7, 121, 182, 0.11);}
+.notif__success .notif_iconBox{color:#00a57f;background-color:#e5f7f3;}
+.notif__alert .notif_iconBox{color:#e93c3c;background-color:#fde5e5;}
+.notif__info .notif_iconBox{color:#e89806;background-color:#f9eed5;}
+.notif__update .notif_iconBox{color:var(--bs-black);background-color:#e8e8e8;}
+.no_notifBox{padding:80px 20px;text-align:center;}
+.no_notifIcon{font-size:142px;line-height:1em;width:1em;height:1em;-o-object-fit:contain;object-fit:contain;}
+.userOpts_dropdown > [data-bs-toggle="dropdown"]{padding:0.2em 0.2em 0.2em 0.6em;}
+.userOpts_pflImg{width:2.5em;min-width:2.5em;height:2.5em;border-radius:0.5rem;-o-object-fit:cover;object-fit:cover;vertical-align:middle;}
+.dropdown-menu{--bs-dropdown-min-width:13rem;-webkit-box-shadow:0px 25px 60px -10px rgba(28, 39, 49, 0.12);box-shadow:0px 25px 60px -10px rgba(28, 39, 49, 0.12);}
+@media (min-width: 1900px){
+.notif_dropdown .dropdown-menu{width:28.125rem;}
+.notif_dropdownBody{max-height:31.25rem;}
+.notif_iconBox{width:2.25rem;min-width:2.25rem;height:2.25rem;}
+.no_notifBox{padding:5rem 1.25rem;}
+.no_notifIcon{font-size:8.875rem;}
+}
+@media (max-width: 1499.98px){
+.dropdown-menu{--bs-dropdown-min-width:10rem;}
+.notif_dropdownBody{max-height:365px;}
+.notif_dropdown .dropdown-menu{width:350px;}
+}
+@media (max-width: 575.98px){
+.notif_dropdown .dropdown-menu{width:300px;}
 }
 /* ____________________ end dashboard page  ____________________ */

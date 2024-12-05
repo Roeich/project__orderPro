@@ -31,10 +31,158 @@
             <div class="d-flex">
                 <input  class="form-control search_inp" type="text" placeholder="Search by name number">
                 <div class="ps-3">
-                    <a class="btn btn-light border min_w_max" href="#">+ New Order</a>
+                    <!-- notifications -->
+                    <div class="dropdown notif_dropdown d-inline-block">
+                        <button class="btn btn_sm border notif_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fi fi-rr-bell lh-1"></i>
+                            <span class="notif_badge"></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end rounded_16 border p-0 overflow-hidden">
+                            <div class="py_12 px_24 border-bottom d-flex justify-content-between">
+                                <div class="pe-2">
+                                    <div class="fs_16 c_dark2">الاشعارات</div>
+                                </div>
+                                <div>
+                                    <span class="fs_12 c_gray2 cursor_pointer"><i class="fi fi-rr-check-double me-2"></i>تعيين الكل كمقروءة</span>
+                                </div>
+                            </div>
+                            <div class="notif_dropdownBody p_12" data-scrollbar>
+                                <!-- notification list -->
+                                <div class="notif_list">
+                                    <a class="notif_item notif__news" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-trophy"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark2">طلب جديد</div>
+                                            <div class="fs_12">تهانينا.. تم شراء المنتج #52142</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-left"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__success unreaded" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-bolt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark2">دفع طلب رقم #54114</div>
+                                            <div class="fs_12">تهانينا.. تم دفع طلب  رقم #54114 عبر التحويل البنكي</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-left"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__alert unreaded" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-exclamation"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark2">نفاذ منتج #51514</div>
+                                            <div class="fs_12">تم نفاذ منتج رقم 51514 بتاريخ 01/04/2024</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-left"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__update" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-comment-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark2">تحديث جديد بالمنصة</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-left"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__info unreaded" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark2">نرجو تقييم تجربتك في المنصة</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-left"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__update unreaded" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-bullseye-pointer"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark2">تحديث جديد بالمنصة</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-left"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__info" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark2">نرجو تقييم تجربتك في المنصة</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-left"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__update" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-bullseye-pointer"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark2">تحديث جديد بالمنصة</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-left"></i>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- no notifications -->
+                                <div class="no_notifBox d-none">
+                                    <img class="no_notifIcon" src="assets/img/notification.svg" alt="">
+                                    <div class="fs_18 c_dark2 mb_8">ليس لديك اي اشعارات بعد</div>
+                                    <div class="fs_16 c_gray2">في حالة كان لديك اي اشعارات ستظهر هنا</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="ps-3">
                     <a class="btn btn-primary min_w_max" href="#">+ New Order</a>
+                </div>
+                <div class="ps-3">
+                    <!-- user options -->
+                    <div class="dropdown userOpts_dropdown d-inline-block mr_8">
+                        <button class="btn btn_sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="userOpts_pflImg" src="assets/img/person.png" alt="profile"> 
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end rounded_16 border p_6 fs_16">
+                            <li><a class="dropdown-item rounded_12" href="profile.html"><i class="fi fi-rr-user me-2"></i> حساب</a></li>
+                            <li><a class="dropdown-item rounded_12" href="profile_settings.html"><i class="fi fi-rr-settings me-2"></i> الإعدادات</a></li>
+                            <li><a class="dropdown-item rounded_12" href="sign_out.html"><i class="fi fi-rr-arrow-circle-right me-2"></i> تسجيل الخروج</a></li>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
