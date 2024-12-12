@@ -10,6 +10,7 @@
     <!-- .............. stylesheets .............. -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
     <link rel="stylesheet" href="assets/css/select2.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -287,52 +288,368 @@
             <!-- stats section -->
             <section class="mb_20">
                 <div class="py-4 px_20 rounded_8 bg_white shadow_sm">
-                    <div class="row gy-3">
+                    <div class="row gy-3 gx-xl-5">
                         <div class="col-xl-7 border-end">
+                            
+                            <!-- Date picker -->
                             <div class="d-flex justify-content-between mb_24">
-                                <div class="pe-3">
+                                <div class="pe-2">
                                     <h2 class="fs_24 fw-semibold mb-1">Orders</h2>
                                     <p class="fs_12 c_gray mb-0">Select Date and see order details below</p>
                                 </div>
                                 <div>
-                                    <button class="btn btn-light">Today</button>
+                                    <input class="orders-date form-control" type="text" placeholder="Select Date">
                                 </div>
                             </div>
-                            <div class="py_12 px-3 border rounded_6 bg_white">
-                                <div class="row">
-                                    <div class="col-4 border-end">
-                                        <div class="fs_12 c_gray mb-2">New Order Requests</div>
-                                        <div class="fs_18 fw-semibold">10</div>
+
+                            <!-- Day Summary -->
+                            <div class="d-flex justify-content-between mb_12">
+                                <div class="pe-2">
+                                    <h3 class="fs_14 fw-normal mb-0">Day Summary</h3>
+                                </div>
+                                <div>
+                                    <a class="c_primary fw-semibold hover_underline" href="#">5 Active Orders</a>
+                                </div>
+                            </div>
+                            <div class="row g-2 mb_24">
+                                <div class="col-6 col-lg-3">
+                                    <div class="d-flex justify-content-between align-items-center px-3 py_12 bg_lightGrd border rounded_6">
+                                        <div class="fs_12 c_dark pe-2">
+                                            Delivery
+                                        </div>
+                                        <div class="fs_18 fw-medium">
+                                            05
+                                        </div>
                                     </div>
-                                    <div class="col-4 border-end">
-                                        <div class="fs_12 c_gray mb-2">Pending Confirmation</div>
-                                        <div class="fs_18 fw-semibold">08</div>
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <div class="d-flex justify-content-between align-items-center px-3 py_12 bg_lightGrd border rounded_6">
+                                        <div class="fs_12 c_dark pe-2">
+                                            Pickup
+                                        </div>
+                                        <div class="fs_18 fw-medium">
+                                            08
+                                        </div>
                                     </div>
-                                    <div class="col-4">
-                                        <div class="fs_12 c_gray mb-2">Order update</div>
-                                        <div class="fs_18 fw-semibold">12</div>
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <div class="d-flex justify-content-between align-items-center px-3 py_12 bg_lightGrd border rounded_6">
+                                        <div class="fs_12 c_dark pe-2">
+                                            Veg
+                                        </div>
+                                        <div class="fs_18 fw-medium">
+                                            12
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <div class="d-flex justify-content-between align-items-center px-3 py_12 bg_lightGrd border rounded_6">
+                                        <div class="fs_12 c_dark pe-2">
+                                            Non Veg
+                                        </div>
+                                        <div class="fs_18 fw-medium">
+                                            08
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- order table -->
+                            <table class="table table-hover data_table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Restaurant</th>
+                                        <th>Name</th>
+                                        <th>Phone</th>
+                                        <th>Condition</th>
+                                        <th>Time</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>3456</td>
+                                        <td>Indian Kitchen Restaurent</td>
+                                        <td>Aditya Singh</td>
+                                        <td>512-213-6178</td>
+                                        <td>Delivery</td>
+                                        <td>15 Feb 8.30 PM</td>
+                                        <td>
+                                            <a class="badge badge_success" href="#">Active</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3456</td>
+                                        <td>Royal buffet</td>
+                                        <td>Natasha Bloom</td>
+                                        <td>512-213-6178</td>
+                                        <td>Delivery</td>
+                                        <td>15 Feb 8.30 PM</td>
+                                        <td>
+                                            <a class="badge badge_warning" href="#">Preparing</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3456</td>
+                                        <td>Indian Kitchen
+                                            Restaurent</td>
+                                        <td>Aditya Singh</td>
+                                        <td>512-213-6178</td>
+                                        <td>Delivery</td>
+                                        <td>15 Feb 8.30 PM</td>
+                                        <td>
+                                            <a class="badge badge_success" href="#">Active</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3456</td>
+                                        <td>Royal buffet</td>
+                                        <td>Nck James</td>
+                                        <td>512-213-6178</td>
+                                        <td>Delivery</td>
+                                        <td>15 Feb 8.30 PM</td>
+                                        <td>
+                                            <a class="badge badge_primary" href="#">Out for delivery</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3456</td>
+                                        <td>Indian Kitchen
+                                            Restaurent</td>
+                                        <td>Aditya Singh</td>
+                                        <td>512-213-6178</td>
+                                        <td>Delivery</td>
+                                        <td>15 Feb 8.30 PM</td>
+                                        <td>
+                                            <a class="badge badge_primary" href="#">Out for delivery</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3456</td>
+                                        <td>Indian Kitchen
+                                            Restaurent</td>
+                                        <td>Natasha Bloom</td>
+                                        <td>512-213-6178</td>
+                                        <td>Delivery</td>
+                                        <td>15 Feb 8.30 PM</td>
+                                        <td>
+                                            <a class="badge badge_success" href="#">Active</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3456</td>
+                                        <td>Royal buffet</td>
+                                        <td>Aditya Singh</td>
+                                        <td>512-213-6178</td>
+                                        <td>Delivery</td>
+                                        <td>15 Feb 8.30 PM</td>
+                                        <td>
+                                            <a class="badge badge_warning" href="#">Preparing</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
                         </div>
                         <div class="col-xl-5">
-                            <div class="row gx-3">
-                                <div class="col-4">
-                                    <div class="py_12 px-3 border rounded_6 bg_white">
-                                        <div class="fs_12 c_gray mb-2">Active</div>
-                                        <div class="fs_18 fw-semibold">16</div>
+                            <div class="d-flex flex-column h-100">
+                                <!-- customer info -->
+                                <div class="p_8 bg_light3 rounded_6 mb_20">
+                                    <div class="d-flex justify-content-between align-items-center p-2 rounded_6 bg_white mb-2">
+                                        <div class="fs_18 pe-2">
+                                            #3455
+                                        </div>
+                                        <div>
+                                            <span class="badge badge_success">Active</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-7 border-end">
+                                            <table class="table-sm fs_12">
+                                                <tr>
+                                                    <th class="fw-normal c_gray">Name</th>
+                                                    <td>Aditya Singh</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal c_gray">Phone</th>
+                                                    <td>512-213-6178</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="fw-normal c_gray">Email</th>
+                                                    <td>aditya@gmail.com</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="fs_12">
+                                                <div class="fw-semibold mb-1">Referred By</div>
+                                                <div class="mb-1">Natasha Singh</div>
+                                                <div>512-213-5978</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="py_12 px-3 border rounded_6 bg_white">
-                                        <div class="fs_12 c_gray mb-2">Complete</div>
-                                        <div class="fs_18 fw-semibold">130</div>
+
+                                <!-- order history -->
+                                <div>
+                                    <ul class="nav nav-tabs infoTab" id="infoTab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="items-tab" data-bs-toggle="tab" data-bs-target="#items-tab-pane" type="button"
+                                                role="tab" aria-controls="items-tab-pane" aria-selected="true">Items</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="order-info-tab" data-bs-toggle="tab" data-bs-target="#order-info-tab-pane" type="button"
+                                                role="tab" aria-controls="order-info-tab-pane" aria-selected="false">Order Info</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="status-tab" data-bs-toggle="tab" data-bs-target="#status-tab-pane" type="button"
+                                                role="tab" aria-controls="status-tab-pane" aria-selected="false">Status</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="past-order-tab" data-bs-toggle="tab" data-bs-target="#past-order-tab-pane" type="button"
+                                                role="tab" aria-controls="past-order-tab-pane" aria-selected="false">Past order</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content pt-3" id="infoTabContent">
+                                        <div class="tab-pane fade show active" id="items-tab-pane" role="tabpanel" aria-labelledby="items-tab" tabindex="0">
+                                            <!-- item list -->
+                                            <div class="p-2 border rounded_6 mb-3">
+                                                <div class="d-flex">
+                                                    <div class="fs_16 flex-grow-1 collapse_btn" data-bs-toggle="collapse" data-bs-target="#orderItems" aria-expanded="true" aria-controls="orderItems">5 Items</div>
+                                                    <div>
+                                                        <a class="c_primary" href="#">Edit Menu</a>
+                                                    </div>
+                                                </div>
+                                                <div class="collapse show" id="orderItems">
+                                                    <div class="border-top p-2 mt-1">
+
+                                                        <!-- Appetizer -->
+                                                        <div class="mb_10">
+                                                            <div class="fs_12 c_gray mb-1">Appetizer</div>
+                                                            <div class="d-flex mb-1">
+                                                                <div>
+                                                                    <i class="fi fi-sr-bullet icon_dot c_success"></i>
+                                                                </div>
+                                                                <div class="px-2 flex-grow-1">
+                                                                    <div class="fw-medium">Lotus Chilli</div>
+                                                                    <div class="fs_12 c_gray">1x Medium Tray - Moderate Spice</div>
+                                                                </div>
+                                                                <div class="fw-medium">$78</div>
+                                                            </div>
+                                                            <div class="d-flex mb-1">
+                                                                <div>
+                                                                    <i class="fi fi-sr-bullet icon_dot c_danger"></i>
+                                                                </div>
+                                                                <div class="px-2 flex-grow-1">
+                                                                    <div class="fw-medium">Reshmi kabab</div>
+                                                                    <div class="fs_12 c_gray">1x Large Tray - Very Spice</div>
+                                                                </div>
+                                                                <div class="fw-medium">$34</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Main course -->
+                                                        <div class="mb_10">
+                                                            <div class="fs_12 c_gray mb-1">Main course</div>
+                                                            <div class="d-flex mb-1">
+                                                                <div>
+                                                                    <i class="fi fi-sr-bullet icon_dot c_success"></i>
+                                                                </div>
+                                                                <div class="px-2 flex-grow-1">
+                                                                    <div class="fw-medium">Matar Polao</div>
+                                                                    <div class="fs_12 c_gray">2x Medium Tray -  Normal Spice</div>
+                                                                </div>
+                                                                <div class="fw-medium">$123</div>
+                                                            </div>
+                                                            <div class="d-flex mb-1">
+                                                                <div>
+                                                                    <i class="fi fi-sr-bullet icon_dot c_danger"></i>
+                                                                </div>
+                                                                <div class="px-2 flex-grow-1">
+                                                                    <div class="fw-medium">Chicken Tangri Kabab</div>
+                                                                    <div class="fs_12 c_gray">60 Pcs - Very Spice</div>
+                                                                </div>
+                                                                <div class="fw-medium">$344</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Dessert -->
+                                                        <div class="mb_10">
+                                                            <div class="fs_12 c_gray mb-1">Dessert</div>
+                                                            <div class="d-flex mb-1">
+                                                                <div>
+                                                                    <i class="fi fi-sr-bullet icon_dot c_success"></i>
+                                                                </div>
+                                                                <div class="px-2 flex-grow-1">
+                                                                    <div class="fw-medium">Jalebi</div>
+                                                                    <div class="fs_12 c_gray">60 pcs</div>
+                                                                </div>
+                                                                <div class="fw-medium">$123</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- total price -->
+                                            <div class="p-2 border rounded_6 mb-3">
+                                                <div class="d-flex">
+                                                    <div class="fs_16 flex-grow-1 collapse_btn" data-bs-toggle="collapse" data-bs-target="#billInfo" aria-expanded="true" aria-controls="billInfo">Bill</div>
+                                                    <div>
+                                                        <span class="c_primary">Paid</span>
+                                                    </div>
+                                                </div>
+                                                <div class="collapse show" id="billInfo">
+                                                    <div class="border-top p-2 mt-1">
+                                                        <div class="">
+                                                            <div class="d-flex mb-1">
+                                                                <div class="pe-2 flex-grow-1">
+                                                                    <div class="fs_12 c_gray">Sub total</div>
+                                                                </div>
+                                                                <div class="fw-medium">$1446</div>
+                                                            </div>
+                                                            <div class="d-flex mb-1">
+                                                                <div class="pe-2 flex-grow-1">
+                                                                    <div class="fs_12 c_gray">Service fee</div>
+                                                                </div>
+                                                                <div class="fw-medium">$30</div>
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <div class="pe-2 flex-grow-1">
+                                                                    <div class="fs_12 c_primary">Total</div>
+                                                                </div>
+                                                                <div class="fw-medium">$1460</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="order-info-tab-pane" role="tabpanel" aria-labelledby="order-info-tab" tabindex="0">
+                                        
+                                        </div>
+                                        <div class="tab-pane fade" id="status-tab-pane" role="tabpanel" aria-labelledby="status-tab" tabindex="0">
+                                        
+                                        </div>
+                                        <div class="tab-pane fade" id="past-order-tab-pane" role="tabpanel" aria-labelledby="past-order-tab" tabindex="0">
+                                        
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="py_12 px-3 border rounded_6 bg_white">
-                                        <div class="fs_12 c_gray mb-2">Revenue</div>
-                                        <div class="fs_18 fw-semibold">$12,789</div>
+
+                                <!-- action buttons -->
+                                <div class="pt-3 mt-auto">
+                                    <div class="row gx-3">
+                                        <div class="col-6">
+                                            <a class="btn w-100 btn-outline-primary" href="#">
+                                                <i class="fi fi-rr-print me-2"></i> Print Bill
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn w-100 btn-primary" type="button">
+                                                Mark as complete
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

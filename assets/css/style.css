@@ -229,6 +229,7 @@ a{
   border: 1px solid var(--text__color);
   background-color: var(--bg__color);
   border-radius: 50rem;
+  text-decoration: none;
 }
 .badge_primary{
   --text__color:var(--c_primary2);
@@ -241,6 +242,29 @@ a{
 .badge_warning{
   --text__color:var(--c_warning);
   --bg__color:var(--bg_warningLt);
+}
+.data_table{
+  font-size: var(--fs_12);
+  font-weight: 500;
+}
+.data_table th,
+.data_table td{
+  vertical-align: middle;
+}
+.data_table th{
+  color: var(--c_gray);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--bg_light);
+}
+.data_table td{
+  border-bottom: 1px dashed var(--bs-border-color);
+}
+.data_table > tbody > tr:hover > * {
+  --bs-table-bg-state: var(--bg_light2);
+}
+.data_table .badge{
+  width: 100%;
 }
 .hover_underline{
   text-decoration: none;
@@ -578,6 +602,57 @@ a{
 /*  */
 .main{
   padding: 5.6rem 1rem 0rem 7.4rem;
+}
+.orders-date{
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 1.49819L10.9965 1.49821V0.501709C10.9965 0.225459 10.7727 0.00170898 10.4965 0.00170898C10.2203 0.00170898 9.9965 0.225459 9.9965 0.501709V1.49796H5.9965V0.501709C5.9965 0.225459 5.77275 0.00170898 5.4965 0.00170898C5.22025 0.00170898 4.9965 0.225459 4.9965 0.501709V1.49796H1C0.44775 1.49796 0 1.94571 0 2.49796V14.998C0 15.5502 0.44775 15.998 1 15.998H15C15.5522 15.998 16 15.5502 16 14.998V2.49796C16 1.94594 15.5522 1.49819 15 1.49819ZM15 14.998H1V2.49796H4.9965V3.00171C4.9965 3.27794 5.22025 3.50171 5.4965 3.50171C5.77275 3.50171 5.9965 3.27794 5.9965 3.00171V2.49821H9.9965V3.00196C9.9965 3.27821 10.2203 3.50196 10.4965 3.50196C10.7727 3.50196 10.9965 3.27821 10.9965 3.00196V2.49821H15V14.998ZM11.5 7.99819H12.5C12.776 7.99819 13 7.77419 13 7.49819V6.49819C13 6.22219 12.776 5.99819 12.5 5.99819H11.5C11.224 5.99819 11 6.22219 11 6.49819V7.49819C11 7.77419 11.224 7.99819 11.5 7.99819ZM11.5 11.9979H12.5C12.776 11.9979 13 11.7742 13 11.4979V10.4979C13 10.2219 12.776 9.99794 12.5 9.99794H11.5C11.224 9.99794 11 10.2219 11 10.4979V11.4979C11 11.7744 11.224 11.9979 11.5 11.9979ZM8.5 9.99794H7.5C7.224 9.99794 7 10.2219 7 10.4979V11.4979C7 11.7742 7.224 11.9979 7.5 11.9979H8.5C8.776 11.9979 9 11.7742 9 11.4979V10.4979C9 10.2222 8.776 9.99794 8.5 9.99794ZM8.5 5.99819H7.5C7.224 5.99819 7 6.22219 7 6.49819V7.49819C7 7.77419 7.224 7.99819 7.5 7.99819H8.5C8.776 7.99819 9 7.77419 9 7.49819V6.49819C9 6.22194 8.776 5.99819 8.5 5.99819ZM4.5 5.99819H3.5C3.224 5.99819 3 6.22219 3 6.49819V7.49819C3 7.77419 3.224 7.99819 3.5 7.99819H4.5C4.776 7.99819 5 7.77419 5 7.49819V6.49819C5 6.22194 4.776 5.99819 4.5 5.99819ZM4.5 9.99794H3.5C3.224 9.99794 3 10.2219 3 10.4979V11.4979C3 11.7742 3.224 11.9979 3.5 11.9979H4.5C4.776 11.9979 5 11.7742 5 11.4979V10.4979C5 10.2222 4.776 9.99794 4.5 9.99794Z' fill='black'/%3E%3C/svg%3E%0A");
+  background-position: right 1em center;
+  background-repeat: no-repeat;
+  background-size: 1.2em;
+  max-width: 9rem;
+  padding-right: 2.2rem;
+}
+.infoTab{
+
+}
+.infoTab.nav-tabs .nav-item .nav-link, 
+.infoTab.nav-tabs .nav-link{
+  color: var(--c_gray);
+  font-size: var(--fs_12);
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 0.5rem 0.9rem;
+}
+.infoTab.nav-tabs .nav-item.show .nav-link, 
+.infoTab.nav-tabs .nav-link.active{
+  color: var(--c_primary);
+  border-color: var(--c_primary);
+}
+.icon_dot{
+  border: 1px solid currentColor;
+  line-height: 1;
+  display: inline-block;
+  border-radius: 2px;
+}
+.collapse_btn{
+  cursor: pointer;
+}
+.collapse_btn::before{
+  content: "\e07c";
+  display: inline-block;
+  vertical-align: sub;
+  font-family: uicons-regular-rounded !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 0.3em;
+  transition: 0.3s;
+}
+.collapse_btn.collapsed::before{
+  transform: rotate(180deg);
 }
 @media(max-width:991.98px){
   .main{
