@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Order Pro - Dashboard</title>
+    <title>Order Pro - Track Order</title>
 
     <!-- .............. stylesheets .............. -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -188,14 +188,14 @@
             <nav>
                 <ul class="header_sideNav">
                     <li class="header_sideNavItem">
-                        <a class="header_sideNavLink active" href="index.html">
+                        <a class="header_sideNavLink" href="index.html">
                             <i class="fi fi-rr-apps"></i>
                             <i class="fi fi-sr-apps"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
                     <li class="header_sideNavItem">
-                        <a class="header_sideNavLink" href="track-order.html">
+                        <a class="header_sideNavLink active" href="track-order.html">
                             <i class="fi fi-rr-overview"></i>
                             <i class="fi fi-sr-overview"></i>
                             <span>Track Order</span>
@@ -241,46 +241,46 @@
 
             <!-- stats section -->
             <section class="mb_20">
-                <div class="row gy-3">
-                    <div class="col-xl-6">
-                        <div class="py_12 px-3 border rounded_6 bg_white">
-                            <div class="row">
-                                <div class="col-4 border-end">
-                                    <div class="fs_12 c_gray mb-2">New Order Requests</div>
-                                    <div class="fs_18 fw-semibold">10</div>
-                                </div>
-                                <div class="col-4 border-end">
-                                    <div class="fs_12 c_gray mb-2">Pending Confirmation</div>
-                                    <div class="fs_18 fw-semibold">08</div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="fs_12 c_gray mb-2">Order update</div>
-                                    <div class="fs_18 fw-semibold">12</div>
-                                </div>
-                            </div>
+                <div class="row gy-3 gx-2">
+                    <div class="col-md-8 col-lg-3">
+                        <div>
+                            <input class="form-control search_inp bg-white" type="text" placeholder="Search by name number">
                         </div>
                     </div>
-                    <div class="col-xl-6">
-                        <div class="row gx-2 gx-sm-3">
-                            <div class="col-4">
-                                <div class="py_12 px-3 border rounded_6 bg_white">
-                                    <div class="fs_12 c_gray mb-2">Active</div>
-                                    <div class="fs_18 fw-semibold">16</div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="py_12 px-3 border rounded_6 bg_white">
-                                    <div class="fs_12 c_gray mb-2">Complete</div>
-                                    <div class="fs_18 fw-semibold">130</div>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="py_12 px-3 border rounded_6 bg_white">
-                                    <div class="fs_12 c_gray mb-2">Revenue</div>
-                                    <div class="fs_18 fw-semibold">$12,789</div>
-                                </div>
-                            </div>
+                    <div class="col-sm-6 col-md-4 col-lg-2">
+                        <div>
+                            <input class="form-control input-date orders-date2" type="text" placeholder="Date">
                         </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-2">
+                        <div>
+                            <select class="form-select select2 select2_searchable">
+                                <option select disabled>Restaurant</option>
+                                <option value="">Restaurant Name</option>
+                                <option value="">Restaurant Name</option>
+                                <option value="">Restaurant Name</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-2">
+                        <div>
+                            <select class="form-select select2">
+                                <option select disabled>Condition</option>
+                                <option value="">Delivery</option>
+                                <option value="">Delivery</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-2">
+                        <div>
+                            <select class="form-select select2">
+                                <option select disabled>Status</option>
+                                <option value="">Active</option>
+                                <option value="">Preparing</option>
+                                <option value="">Out for delivery</option>
+                            </select>
+                        </div>
+                        
                     </div>
                 </div>
             </section>
@@ -290,15 +290,9 @@
                 <div class="py-4 px_20 rounded_8 bg_white shadow_sm">
                     <div class="row gy-3 gx-xl-5">
                         <div class="col-xl-7 border-xl-end">
-                            
-                            <!-- Date picker -->
                             <div class="d-flex justify-content-between mb_24">
                                 <div class="pe-2">
                                     <h2 class="fs_24 fw-semibold mb-1">Orders</h2>
-                                    <p class="fs_12 c_gray mb-0">Select Date and see order details below</p>
-                                </div>
-                                <div>
-                                    <input class="form-control input-date orders-date" type="text" placeholder="Select Date">
                                 </div>
                             </div>
 

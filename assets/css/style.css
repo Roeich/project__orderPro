@@ -204,11 +204,15 @@ a{
   border-radius: 0.5714rem;
   padding: 0.6072rem 1rem;
 }
-.form-control{
+.form-control,
+.form-select{
   font-size: var(--fs_12);
   border: 0.5px solid var(--border_light);
   border-radius: 0.4286rem;
   padding: 0.6429rem 1rem;
+}
+.form-select{
+  padding: 0.678rem 1.5rem 0.678rem 1rem;
 }
 .search_inp{
   background-color: var(--bg_light);
@@ -606,13 +610,15 @@ a{
 .main{
   padding: 5.6rem 1rem 0rem 7.4rem;
 }
-.orders-date{
+.input-date{
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 1.49819L10.9965 1.49821V0.501709C10.9965 0.225459 10.7727 0.00170898 10.4965 0.00170898C10.2203 0.00170898 9.9965 0.225459 9.9965 0.501709V1.49796H5.9965V0.501709C5.9965 0.225459 5.77275 0.00170898 5.4965 0.00170898C5.22025 0.00170898 4.9965 0.225459 4.9965 0.501709V1.49796H1C0.44775 1.49796 0 1.94571 0 2.49796V14.998C0 15.5502 0.44775 15.998 1 15.998H15C15.5522 15.998 16 15.5502 16 14.998V2.49796C16 1.94594 15.5522 1.49819 15 1.49819ZM15 14.998H1V2.49796H4.9965V3.00171C4.9965 3.27794 5.22025 3.50171 5.4965 3.50171C5.77275 3.50171 5.9965 3.27794 5.9965 3.00171V2.49821H9.9965V3.00196C9.9965 3.27821 10.2203 3.50196 10.4965 3.50196C10.7727 3.50196 10.9965 3.27821 10.9965 3.00196V2.49821H15V14.998ZM11.5 7.99819H12.5C12.776 7.99819 13 7.77419 13 7.49819V6.49819C13 6.22219 12.776 5.99819 12.5 5.99819H11.5C11.224 5.99819 11 6.22219 11 6.49819V7.49819C11 7.77419 11.224 7.99819 11.5 7.99819ZM11.5 11.9979H12.5C12.776 11.9979 13 11.7742 13 11.4979V10.4979C13 10.2219 12.776 9.99794 12.5 9.99794H11.5C11.224 9.99794 11 10.2219 11 10.4979V11.4979C11 11.7744 11.224 11.9979 11.5 11.9979ZM8.5 9.99794H7.5C7.224 9.99794 7 10.2219 7 10.4979V11.4979C7 11.7742 7.224 11.9979 7.5 11.9979H8.5C8.776 11.9979 9 11.7742 9 11.4979V10.4979C9 10.2222 8.776 9.99794 8.5 9.99794ZM8.5 5.99819H7.5C7.224 5.99819 7 6.22219 7 6.49819V7.49819C7 7.77419 7.224 7.99819 7.5 7.99819H8.5C8.776 7.99819 9 7.77419 9 7.49819V6.49819C9 6.22194 8.776 5.99819 8.5 5.99819ZM4.5 5.99819H3.5C3.224 5.99819 3 6.22219 3 6.49819V7.49819C3 7.77419 3.224 7.99819 3.5 7.99819H4.5C4.776 7.99819 5 7.77419 5 7.49819V6.49819C5 6.22194 4.776 5.99819 4.5 5.99819ZM4.5 9.99794H3.5C3.224 9.99794 3 10.2219 3 10.4979V11.4979C3 11.7742 3.224 11.9979 3.5 11.9979H4.5C4.776 11.9979 5 11.7742 5 11.4979V10.4979C5 10.2222 4.776 9.99794 4.5 9.99794Z' fill='black'/%3E%3C/svg%3E%0A");
   background-position: right 1em center;
   background-repeat: no-repeat;
   background-size: 1.2em;
-  max-width: 9rem;
   padding-right: 2.2rem;
+}
+.orders-date{
+  max-width: 9rem;
 }
 .infoTab{
 
@@ -658,6 +664,56 @@ a{
 .collapse_btn.collapsed::before{
   transform: rotate(180deg);
 }
+
+/*  */
+.progress_steps{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.progress_step{
+  padding-left: 2.4286rem;
+  padding-bottom: 0.7143rem;
+  position: relative;
+}
+.progress_step::before{
+  content: "";
+  position: absolute;
+  top: 0rem;
+  left: 1rem;
+  border-left: 1px solid var(--c_primary);
+  height: 100%;
+}
+.progress_step:last-child::before{
+  content: none;
+}
+.progress_step::after{
+  content: "";
+  position: absolute;
+  top: 0rem;
+  left: 1rem;
+  height: 1.2857rem;
+  width: 1.2857rem;
+  border: 1px solid var(--c_primary);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bg_white);
+}
+.progress_step.completed::after{
+  background-color: var(--bg_primary);
+}
+.order_item{
+  display: block;
+  color: var(--c_dark);
+  text-decoration: none;
+  padding: var(--p_8);
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--rounded_6);
+  margin-bottom: var(--m_12);
+}
+.order_item:hover{
+  background-color: var(--bg_light);
+}
 @media(min-width:1200px){
   .border-xl-end {
     border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
@@ -669,3 +725,45 @@ a{
   }
 }
 /* ____________________ end dashboard page  ____________________ */
+
+/* ____________________ start track order page  ____________________ */
+.select2-container .select2-selection--single{
+  height: 2.7857rem;
+  border-radius: 0.4286rem;
+  border-color: var(--bs-border-color);
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 2.6429rem;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 2.6429rem;
+  display: inline-grid;
+  place-items: center;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+  display: none;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow::before{
+  content: "\e07c";
+  display: inline-block;
+  vertical-align: sub;
+  font-family: uicons-regular-rounded !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.select2-container{
+  width: 100% !important;
+}
+.select2-dropdown{
+  border-color: var(--bs-border-color);
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.3rem;
+}
+/* ____________________ end track order page  ____________________ */

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Order Pro - New Order</title>
+
+    <!-- .............. stylesheets .............. -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- ____________________ start header area  ____________________ -->
+    <header class="header">
+        <!-- header top -->
+        <div class="header_top fixed-top d-flex justify-content-between align-items-center">
+            <div class="d-flex pe-3">
+                <a class="header_brand" href="index.html">
+                    <img class="header_logo" src="assets/img/OrderPro.png" alt="order pro">
+                </a>
+                <div class="fs_16 ps-4 d-none d-lg-block">
+                    Jayesh Sinha <span class="fs_14"> / Admin </span>
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <input  class="form-control search_inp" type="text" placeholder="Search by name number">
+                <div class="ps-3">
+                    <!-- notifications -->
+                    <div class="dropdown notif_dropdown d-inline-block">
+                        <button class="btn btn_sm border notif_btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fi fi-rr-bell lh-1"></i>
+                            <span class="notif_badge"></span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end rounded_16 border p-0 overflow-hidden">
+                            <div class="py_12 px-3 border-bottom d-flex justify-content-between">
+                                <div class="pe-2">
+                                    <div class="fs_16 c_dark">Notifications</div>
+                                </div>
+                            </div>
+                            <div class="notif_dropdownBody p_12" data-scrollbar>
+                                <!-- notification list -->
+                                <div class="notif_list">
+                                    <a class="notif_item notif__news" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-trophy"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark">New order</div>
+                                            <div class="c_gray fs_12">Congratulations.. Item #52142 has been purchased</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-right"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__success unreaded" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-bolt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark">Payment of order number #54114</div>
+                                            <div class="c_gray fs_12">Congratulations.. Order #54114 has been paid via bank transfer</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-right"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__alert unreaded" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-exclamation"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark">Product #51514 is sold out</div>
+                                            <div class="c_gray fs_12">Product No. 51514 was sold out on 04/01/2024</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-right"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__update" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-comment-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark">New update on the platform </div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-right"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__info unreaded" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark">Please rate your experience on the platform</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-right"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__update unreaded" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-bullseye-pointer"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark">New update on the platform</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-right"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__info" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark">Please rate your experience on the platform</div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-right"></i>
+                                        </div>
+                                    </a>
+                                    <a class="notif_item notif__update" href="#">
+                                        <div>
+                                            <div class="notif_iconBox">
+                                                <i class="fi fi-rr-bullseye-pointer"></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 px_12">
+                                            <div class="fs_14 c_dark">New update on the platform </div>
+                                        </div>
+                                        <div>
+                                            <i class="fi fi-rr-angle-small-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- no notifications -->
+                                <div class="no_notifBox d-none">
+                                    <img class="no_notifIcon" src="assets/img/notification.svg" alt="">
+                                    <div class="fs_14 c_dark mb_8">You don't have any notifications yet</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ps-3 add_btn_wrap">
+                    <a class="btn btn-primary min_w_max" href="create-order.html"><i class="fi fi-sr-plus"></i> <span class="d-none d-lg-inline">New Order</span></a>
+                </div>
+                <div class="ps-3">
+                    <!-- user options -->
+                    <div class="dropdown userOpts_dropdown d-inline-block">
+                        <button class="btn btn_sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="userOpts_pflImg" src="assets/img/person.png" alt="profile"> 
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end border p_8 fs_16">
+                            <li><a class="dropdown-item" href="profile.html"><i class="fi fi-rr-user me-2"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="setting.html"><i class="fi fi-rr-settings me-2"></i> Setting</a></li>
+                            <li><a class="dropdown-item" href="logout.html"><i class="fi fi-rr-arrow-circle-right me-2"></i> Logout</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- header side menu -->
+        <div class="header_side_menu">
+            <nav>
+                <ul class="header_sideNav">
+                    <li class="header_sideNavItem">
+                        <a class="header_sideNavLink" href="index.html">
+                            <i class="fi fi-rr-apps"></i>
+                            <i class="fi fi-sr-apps"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="header_sideNavItem">
+                        <a class="header_sideNavLink active" href="track-order.html">
+                            <i class="fi fi-rr-overview"></i>
+                            <i class="fi fi-sr-overview"></i>
+                            <span>Track Order</span>
+                        </a>
+                    </li>
+                    <li class="header_sideNavItem">
+                        <a class="header_sideNavLink" href="customer.html">
+                            <i class="fi fi-rr-user"></i>
+                            <i class="fi fi-sr-user"></i>
+                            <span>Customer</span>
+                        </a>
+                    </li>
+                    <li class="header_sideNavItem">
+                        <a class="header_sideNavLink" href="menu-editor.html">
+                            <i class="fi fi-rr-reservation-table"></i>
+                            <i class="fi fi-sr-reservation-table"></i>
+                            <span>Menu Editor</span>
+                        </a>
+                    </li>
+                    <li class="header_sideNavItem">
+                        <a class="header_sideNavLink" href="restaurants.html">
+                            <i class="fi fi-rr-restaurant"></i>
+                            <i class="fi fi-sr-restaurant"></i>
+                            <span>Restaurants</span>
+                        </a>
+                    </li>
+                    <li class="header_sideNavItem">
+                        <a class="header_sideNavLink" href="setting.html">
+                            <i class="fi fi-rr-settings"></i>
+                            <i class="fi fi-sr-settings"></i>
+                            <span>Setting</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- ____________________ end header area  ____________________ -->
+
+    <!-- ____________________ start main area  ____________________ -->
+    <main class="main">
+        <div class="container">
+            <section class="mb_20">
+                <div class="py-5 px_20 rounded_8 bg_white shadow_sm">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-5">
+                            <div class="py-xl-5">
+                                <h2 class="fs_24 fw-semibold text-center mb-3">Select a restaurant to take the order</h2>
+    
+                                <div class="mb-3">
+                                    <a href="#" class="border rounded_6">
+                                        Indian Cuisine Kitchen
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- ____________________ end main area  ____________________ -->
+
+
+    <!-- .............. scripts .............. -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/flatpickr.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
