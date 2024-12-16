@@ -22,4 +22,16 @@ $(document).ready(function(){
     });
     $('.select2.select2_searchable').select2();
     /* ________________ end track order page ________________ */
+    
+    /* ________________ start create order page ________________ */
+    // phone number input
+    if($("#phone_number").length>0){
+        const iti = window.intlTelInput($("#phone_number")[0],{
+            initialCountry: "us", 
+            utilsScript: "/assets/js/utils.js",
+            strictMode: true,
+            separateDialCode: true // Display dial code separately
+        });
+    }
+    /* ________________ end create order page ________________ */
 })

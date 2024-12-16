@@ -165,6 +165,7 @@ a{
 .px_12{padding-left: var(--p_12);padding-right: var(--p_12);}
 .py_12{padding-top: var(--p_12);padding-bottom: var(--p_12);}
 .px_20{padding-left: var(--p_20);padding-right: var(--p_20);}
+.py_20{padding-top: var(--p_20);padding-bottom: var(--p_20);}
 .px_36{padding-left: var(--p_36);padding-right: var(--p_36);}
 
 .px_24{padding-left:var(--p_24);padding-right:var(--p_24);}
@@ -767,3 +768,29 @@ a{
   border-radius: 0.3rem;
 }
 /* ____________________ end track order page  ____________________ */
+
+/* ____________________ start create order page  ____________________ */
+.restaurant-item{
+  color: var(--c_dark);
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.7143rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--rounded_6);
+  margin-bottom: 1.7143rem;
+  text-decoration: none;
+}
+.restaurant-item:hover{
+  background-color: var(--bg_light);
+}
+.restaurant-logo{
+  width: 3.7143rem;
+  height: 3.7143rem;
+  object-fit: contain;
+  border-radius: var(--rounded_6);
+}
+.restaurant-name{
+  font-size: var(--fs_18);
+  padding-left: 1.2857rem;
+}
+/* ____________________ end create order page  ____________________ */

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Order Pro - Track Order</title>
+    <title>Order Pro - New Order</title>
 
     <!-- .............. stylesheets .............. -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -239,139 +239,35 @@
     <!-- ____________________ start main area  ____________________ -->
     <main class="main">
         <div class="container">
-
-            <!-- form section -->
             <section class="mb_20">
-                <div class="py-4 px_20 rounded_8 bg_white shadow_sm">
-                    <div class="row gy-3">
-                        <div class="col-xl-7">
-                            <div>
-                                <h2 class="fs_24 fw-semibold mb_20">Create Order</h2>
-                                <div class="py_20 px-4 border rounded_6">
-                                    <h3 class="fs_16 fw-semibold mb_20">
-                                        Personal Details
-                                    </h3>
-                                    <div class="row">
-                                        <div class="col-lg-10">
-                                            <div class="mb_20">
-                                                <input class="form-control search_inp" type="text" placeholder="Search by name number">
-                                            </div>
-                                            <div class="mb_20">
-                                                <label class="fs_14 d-block mb-1" for="phone_number">Phone Number</label>
-                                                <input class="form-control" id="phone_number" type="tel">
-                                            </div>
-                                            <div class="mb_20">
-                                                <label class="fs_14 d-block mb-1" for="email">Email</label>
-                                                <input class="form-control" id="email" type="tel" placeholder="Enter">
-                                            </div>
-                                            <div class="mb_20">
-                                                <label class="fs_14 d-block mb-1" for="name">Name</label>
-                                                <input class="form-control" id="name" type="tel" placeholder="Enter">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="py-5 px_20 rounded_8 bg_white shadow_sm">
+                    <div class="row justify-content-center">
                         <div class="col-xl-5">
-                            <div>
-                                <h2 class="fs_24 fw-semibold mb_20">Order Summary</h2>
-                                <div class="py_20 px-4 border rounded_6 mb_20">
-                                    <h3 class="fs_16 fw-semibold mb_20">
-                                        Customer
-                                    </h3>
-
-                                    <div class="mb-3">
-                                        <table class="table-sm fs_12">
-                                            <tbody>
-                                                <tr>
-                                                    <th class="fw-normal c_gray">Name</th>
-                                                    <td>Aditya Singh</td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="fw-normal c_gray">Phone</th>
-                                                    <td>512-213-6178</td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="fw-normal c_gray">Email</th>
-                                                    <td>aditya@gmail.com</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="pt-3 border-top">
-                                        <div class="row gx-3">
-                                            <div class="col-6">
-                                                <h4 class="fs_14 fw-medium">Referred By</h4>
-                                            </div>
-                                            <div class="col-6">
-                                                <table class="table-sm fs_12">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th class="fw-normal c_gray">Name</th>
-                                                            <td>Aditya Singh</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="fw-normal c_gray">Phone</th>
-                                                            <td>512-213-6178</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                            <div class="py-xl-5">
+                                <h2 class="fs_24 fw-semibold text-center mb-3">Select a restaurant to take the order</h2>
+    
+                                <div>
+                                    <a class="restaurant-item" href="create-order.html">
+                                        <img class="restaurant-logo" src="assets/img/order/indian-cuisine-kitchen.png" alt="indian cuisine kitchen">
+                                        <div class="restaurant-name">
+                                            Indian Cuisine Kitchen
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="py_20 px-4 border rounded_6">
-                                    <h3 class="fs_16 fw-semibold mb_20">
-                                        Event Deatils
-                                    </h3>
-                                    <div class="mb_10">
-                                        <div class="d-flex mb_10">
-                                            <div class="c_primary">
-                                                <i class="fi fi-rr-utensils"></i>
-                                            </div>
-                                            <div class="ps-2 flex-grow-1">
-                                                <div class="fw-medium">Indian Cuisine Kitchen </div>
-                                            </div>
+                                    </a>
+                                    <a class="restaurant-item" href="create-order.html">
+                                        <img class="restaurant-logo" src="assets/img/order/royal-buffet.png" alt="royal buffet">
+                                        <div class="restaurant-name">
+                                            Royal buffet
                                         </div>
-                                        <div class="d-flex mb_10">
-                                            <div class="c_primary">
-                                                <i class="fi fi-rr-clock-five"></i>
-                                            </div>
-                                            <div class="ps-2 flex-grow-1">
-                                                <div class="fw-medium">Feb 12, 2024 08.30 PM</div>
-                                            </div>
+                                    </a>
+                                    <a class="restaurant-item" href="create-order.html">
+                                        <img class="restaurant-logo" src="assets/img/order/aldenaire-kitchen.png" alt="Aldenaire Kitchen">
+                                        <div class="restaurant-name">
+                                            Aldenaire Kitchen
                                         </div>
-                                        <div class="d-flex mb_10">
-                                            <div class="c_primary">
-                                                <i class="fi fi-rr-shipping-fast"></i>
-                                            </div>
-                                            <div class="ps-2 flex-grow-1">
-                                                <div class="fw-medium">Delivery</div>
-                                                <div>36 Villa, Block H, Road 8, near big city</div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mb_10">
-                                            <div class="c_primary">
-                                                <i class="fi fi-rr-user"></i>
-                                            </div>
-                                            <div class="ps-2 flex-grow-1">
-                                                <div class="fw-medium">40 Guest</div>
-                                                <div><span class="me-3"><i class="fi fi-sr-bullet c_primary"></i> 30 Adult</span><span class="me-3"> <i class="fi fi-sr-bullet c_primary"></i>10 Kids</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex mb_10">
-                                            <div class="c_primary">
-                                                <i class="fi fi-rr-room-service"></i>
-                                            </div>
-                                            <div class="ps-2 flex-grow-1">
-                                                <div class="fw-medium">25 Items</div>
-                                                <div><span class="me-3"><i class="fi fi-sr-bullet icon_dot c_success"></i> Veg - 3</span><span class="me-3"><i class="fi fi-sr-bullet icon_dot c_danger"></i> No Veg - 3</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
