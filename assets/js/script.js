@@ -32,6 +32,15 @@ $(document).ready(function(){
             strictMode: true,
             separateDialCode: true // Display dial code separately
         });
-    }
+    };
+
+    // preview input
+    $("[data-preview-target]").on("input",function(){
+        const inputValue=$(this).val().trim();
+        const previewTarget=$(this).attr("data-preview-target");
+        console.log(inputValue);
+        $(`[data-preview="${previewTarget}"]`).text(inputValue);
+
+    })
     /* ________________ end create order page ________________ */
 })

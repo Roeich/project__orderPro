@@ -247,7 +247,8 @@
                         <div class="col-xl-7">
                             <div>
                                 <h2 class="fs_24 fw-semibold mb_20">Create Order</h2>
-                                <div class="py_20 px-4 border rounded_6">
+                                
+                                <div class="py_20 px-4 border rounded_6 mb_20">
                                     <h3 class="fs_16 fw-semibold mb_20">
                                         Personal Details
                                     </h3>
@@ -258,17 +259,26 @@
                                             </div>
                                             <div class="mb_20">
                                                 <label class="fs_14 d-block mb-1" for="phone_number">Phone Number</label>
-                                                <input class="form-control" id="phone_number" type="tel">
+                                                <input class="form-control" id="phone_number" type="tel" data-preview-target="customer-phone">
                                             </div>
                                             <div class="mb_20">
                                                 <label class="fs_14 d-block mb-1" for="email">Email</label>
-                                                <input class="form-control" id="email" type="tel" placeholder="Enter">
+                                                <input class="form-control" id="email" type="email" placeholder="Enter" data-preview-target="customer-email">
                                             </div>
                                             <div class="mb_20">
                                                 <label class="fs_14 d-block mb-1" for="name">Name</label>
-                                                <input class="form-control" id="name" type="tel" placeholder="Enter">
+                                                <input class="form-control" id="name" type="text" placeholder="Enter" data-preview-target="customer-name">
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row gx-3 justify-content-center">
+                                    <div class="col-4 col-md-3">
+                                        <button class="btn btn-outline-primary w-100" type="button"><i class="fi fi-rr-angle-small-left"></i> Previous</button>
+                                    </div>
+                                    <div class="col-8 col-md-6">
+                                        <button class="btn btn-primary w-100" type="button">Next <i class="fi fi-rr-angle-small-right"></i></button>
+
                                     </div>
                                 </div>
                             </div>
@@ -286,15 +296,15 @@
                                             <tbody>
                                                 <tr>
                                                     <th class="fw-normal c_gray">Name</th>
-                                                    <td>Aditya Singh</td>
+                                                    <td data-preview="customer-name"></td>
                                                 </tr>
                                                 <tr>
                                                     <th class="fw-normal c_gray">Phone</th>
-                                                    <td>512-213-6178</td>
+                                                    <td data-preview="customer-phone"></td>
                                                 </tr>
                                                 <tr>
                                                     <th class="fw-normal c_gray">Email</th>
-                                                    <td>aditya@gmail.com</td>
+                                                    <td data-preview="customer-email"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -309,11 +319,11 @@
                                                     <tbody>
                                                         <tr>
                                                             <th class="fw-normal c_gray">Name</th>
-                                                            <td>Aditya Singh</td>
+                                                            <td></td>
                                                         </tr>
                                                         <tr>
                                                             <th class="fw-normal c_gray">Phone</th>
-                                                            <td>512-213-6178</td>
+                                                            <td></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
