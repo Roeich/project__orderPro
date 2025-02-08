@@ -715,6 +715,10 @@ a{
 .order_item:hover{
   background-color: var(--bg_light);
 }
+.current_order_item{
+  text-decoration: none;
+  color: var(--c_dark);
+}
 @media(min-width:1200px){
   .border-xl-end {
     border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
@@ -770,6 +774,12 @@ a{
 /* ____________________ end track order page  ____________________ */
 
 /* ____________________ start create order page  ____________________ */
+.restaurant-opt{
+  display: block;
+  cursor: pointer;
+  border-radius: var(--rounded_6);
+  margin-bottom: 1.7143rem;
+}
 .restaurant-item{
   color: var(--c_dark);
   display: flex;
@@ -777,11 +787,14 @@ a{
   padding: 1rem 1.7143rem;
   border: 1px solid var(--bs-border-color);
   border-radius: var(--rounded_6);
-  margin-bottom: 1.7143rem;
   text-decoration: none;
 }
 .restaurant-item:hover{
   background-color: var(--bg_light);
+}
+.restaurant-opt input:checked ~ .restaurant-item{
+  background-color: var(--bg_light2);
+  border-color: var(--c_primary);
 }
 .restaurant-logo{
   width: 3.7143rem;
@@ -792,5 +805,64 @@ a{
 .restaurant-name{
   font-size: var(--fs_18);
   padding-left: 1.2857rem;
+}
+[data-form-step="1"]:not(.d-none) ~ .order__summary{
+  display: none;
+}
+
+.event_date ~ .flatpickr-calendar,
+.event_time ~ .flatpickr-calendar{
+  box-shadow: none;
+  border: 1px solid var(--bs-border-color);
+}
+.event_time ~ .flatpickr-calendar.hasTime .flatpickr-time{
+  border-top: none;
+}
+@media(max-width:1199.98px){
+  .order_pgMain{
+    padding-bottom: 5.1429rem;
+  }
+  .form_actRow{
+    position: fixed;
+    left: 7.4rem;
+    right: 0rem;
+    bottom: 0rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg_white);
+    border-top: 1px solid var(--bs-border-color);
+  }
+}
+@media(max-width:991.98px){
+  .order_pgMain{
+    padding-bottom: 9.5rem;
+  }
+  .form_actRow{
+    position: fixed;
+    left: 0rem;
+    right: 0rem;
+    bottom: 4.62rem;
+  }
+}
+
+@media(max-width:575.98px){
+  .form_actRow{
+    padding-right: 5rem;
+  }
+  .event_date ~ .flatpickr-calendar,
+  .event_time ~ .flatpickr-calendar{
+    width:100%;
+  }
+
+  .event_date ~ .flatpickr-calendar .flatpickr-days{
+    width: 100%;
+  }
+  .event_date ~ .flatpickr-calendar .dayContainer{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .event_date ~ .flatpickr-calendar .flatpickr-day{
+    max-width: 14.2857143%;
+  }
 }
 /* ____________________ end create order page  ____________________ */
